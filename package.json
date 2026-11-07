@@ -1,0 +1,14 @@
+{
+  "name": "safari-commander",
+  "version": "0.1.0",
+  "private": true,
+  "description": "A quiet, keyboard-first command palette for Safari on Mac.",
+  "scripts": {
+    "test": "node --test tests/*.test.cjs",
+    "check": "node scripts/check.cjs",
+    "check:webkit": "swift scripts/validate-webkit.swift",
+    "preview": "node scripts/preview.cjs",
+    "package": "bash scripts/package.sh",
+    "build:mac": "bash scripts/build-mac.sh"
+  }
+}

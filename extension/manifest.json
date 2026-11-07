@@ -1,0 +1,23 @@
+{
+  "manifest_version": 3,
+  "name": "Safari Commander",
+  "description": "Your tabs, searches, and browser commands. One quiet shortcut: ⌘K.",
+  "version": "0.1.0",
+  "permissions": ["tabs", "activeTab", "scripting", "storage", "clipboardWrite"],
+  "host_permissions": ["http://*/*", "https://*/*"],
+  "background": {"scripts": ["core.js", "background.js"]},
+  "action": {
+    "default_title": "Safari Commander",
+    "default_popup": "palette.html",
+    "default_icon": {"16": "icons/toolbar-16.png", "32": "icons/toolbar-32.png"}
+  },
+  "commands": {
+    "toggle-palette": {
+      "suggested_key": {"default": "Ctrl+K", "mac": "Command+K"},
+      "description": "Show Safari Commander"
+    }
+  },
+  "icons": {"48": "icons/icon-48.png", "128": "icons/icon-128.png", "256": "icons/icon-256.png", "512": "icons/icon-512.png"},
+  "web_accessible_resources": [{"resources": ["palette.html", "palette.css", "palette.js", "core.js", "icons.js"], "matches": ["http://*/*", "https://*/*"]}],
+  "content_security_policy": {"extension_pages": "script-src 'self'; object-src 'none'; base-uri 'none'"}
+}

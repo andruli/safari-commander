@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light dark">
+  <title>Safari Commander</title>
+  <link rel="stylesheet" href="palette.css">
+  <script src="core.js" defer></script>
+  <script src="icons.js" defer></script>
+  <script src="palette.js" defer></script>
+</head>
+<body>
+  <main class="palette" aria-label="Safari Commander">
+    <header class="search-bar">
+      <span class="search-icon" data-icon="search" aria-hidden="true"></span>
+      <input id="search" type="text" role="combobox" aria-label="Search tabs and commands" aria-autocomplete="list" aria-expanded="true" aria-controls="results" placeholder="Search tabs or type a command…" autocomplete="off" autocapitalize="off" spellcheck="false" autofocus>
+      <button id="dismiss" class="escape" title="Close palette (Escape)" aria-label="Close palette">esc</button>
+    </header>
+    <nav class="scope-bar" aria-label="Search scope">
+      <div class="scopes" role="group" aria-label="Filter results">
+        <button data-mode="all" aria-pressed="true">All</button>
+        <button data-mode="tabs" aria-pressed="false">Tabs</button>
+        <button data-mode="commands" aria-pressed="false">Commands</button>
+      </div>
+      <span id="tab-count" class="tab-count"></span>
+    </nav>
+    <div class="results-area">
+      <div id="results" role="listbox" aria-label="Results" aria-busy="true"></div>
+      <div id="empty" class="empty" hidden>
+        <span data-icon="search" aria-hidden="true"></span>
+        <p id="empty-title">No matches</p>
+        <span id="empty-detail">Try another name or switch to All.</span>
+      </div>
+    </div>
+    <footer>
+      <span class="brand"><span data-icon="command" aria-hidden="true"></span> Commander</span>
+      <span class="key-hints"><span><kbd>↑</kbd><kbd>↓</kbd> navigate</span><span><kbd>↵</kbd> <span id="action-hint">switch</span></span></span>
+    </footer>
+    <div id="status" class="status" role="status" aria-live="polite" hidden></div>
+    <span id="announcement" class="sr-only" role="status" aria-live="polite"></span>
+  </main>
+</body>
+</html>

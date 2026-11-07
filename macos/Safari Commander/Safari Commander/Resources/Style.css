@@ -1,0 +1,13 @@
+:root { color-scheme: light dark; font-family: -apple-system, BlinkMacSystemFont, sans-serif; }
+* { box-sizing: border-box; }
+body { margin: 0; padding: 30px 24px 22px; text-align: center; color: light-dark(#242426, #f2f2f5); background: light-dark(#f5f5f7, #242426); -webkit-font-smoothing: antialiased; }
+img { display: block; margin: 0 auto 14px; }
+h1 { font-size: 26px; font-weight: 600; letter-spacing: -.7px; margin: 0 0 8px; }
+.subtitle { color: light-dark(#77777e, #a0a0a8); margin: 0; font-size: 13px; }
+.shortcut { display: flex; justify-content: center; gap: 7px; margin: 23px 0 14px; }
+kbd { font-family: inherit; display: inline-grid; place-items: center; font-size: 24px; width: 46px; height: 44px; border-radius: 9px; background: light-dark(#fff, #444448); border: 1px solid light-dark(#ddd, #555); box-shadow: 0 2px 0 light-dark(#ddd, #161616); }
+.intro { font-size: 13px; line-height: 20px; margin: 0 0 18px; }
+#state { font-size: 12px; color: light-dark(#77777e, #a0a0a8); }
+button { font: inherit; font-size: 13px; border: 0; border-radius: 7px; background: #007aff; color: white; padding: 9px 22px; }
+button:focus-visible { outline: 3px solid #007aff77; outline-offset: 3px; }
+.footnote { font-size: 11px; line-height: 16px; color: light-dark(#77777e, #a0a0a8); margin: 14px 0 0; }
